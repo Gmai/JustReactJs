@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "HelloWorld server side";
+}
+
+<h2>HelloWorld server side</h2>
+
+<script>
+	debugger;
+	$(document).ready(function () { debugger; });
+</script>
+
+<div id="container"></div>
+@Html.React("HelloWorldComponent", new
+{
+	greetTarget = "Gym"
+})
+
+<script src="@Url.Content("~/Scripts/JSX/HelloWorldComponent.jsx")"></script>
+<script src="@Url.Content("~/Scripts/JSX/HelloWorldServerSide.jsx")"></script>
+@Html.ReactInitJavaScript()
